@@ -18,7 +18,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/finnvoor/PlaydateKit", branch: "main"),
-        .package(url: "https://github.com/kkebo/GameOfLife.swiftpm", branch: "main"),
+        .package(url: "https://github.com/kkebo/GameOfLife.swiftpm", branch: "embedded"),
     ],
     targets: [
         .target(

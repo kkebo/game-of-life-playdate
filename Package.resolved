@@ -1,13 +1,13 @@
 {
-  "originHash" : "d0691433c8ea9922a3f298a34b7f2e24aefb023a8363254831b5071a303e4236",
+  "originHash" : "376e8065f9c43fc0b5d3733988f3f1f3163f53cfe8cf43e609f7817c18ac8619",
   "pins" : [
     {
       "identity" : "gameoflife.swiftpm",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kkebo/GameOfLife.swiftpm",
       "state" : {
-        "branch" : "main",
-        "revision" : "633eb5d5c2cdd6bd7575c07a73c3042bd2a08a6e"
+        "branch" : "embedded",
+        "revision" : "9487b5aaff52363c99d53c79d0466d75ae9bfcc7"
       }
     },
     {
@@ -17,15 +17,6 @@
       "state" : {
         "branch" : "main",
         "revision" : "b9a69fbeca09be0da3d63f8d1343aa671556ff58"
-      }
-    },
-    {
-      "identity" : "swift-collections",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-collections",
-      "state" : {
-        "branch" : "main",
-        "revision" : "7c9df0070615b888fc9c30429ad33b4d69702b45"
       }
     }
   ],
