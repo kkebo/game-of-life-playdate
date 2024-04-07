@@ -20,7 +20,6 @@ let package = Package(
         .target(
             name: "GameOfLifePlaydate",
             dependencies: [
-                // "PlaydateKit",
                 .product(name: "Playdate", package: "swift-playdate-examples"),
                 .product(name: "GameOfLife", package: "GameOfLife.swiftpm"),
             ],
