@@ -1,0 +1,5 @@
+name=Game of Life
+author=Kenta Kubo
+description=The Conway's Game of Life implemented in Swift.
+bundleID=xyz.kebo.GameOfLifePlaydate
+imagePath=

@@ -1,5 +1,5 @@
 {
-  "originHash" : "376e8065f9c43fc0b5d3733988f3f1f3163f53cfe8cf43e609f7817c18ac8619",
+  "originHash" : "2248e39948b95eb5237de32b9b0806f2254476aafd13439c3b581a10c9d6552f",
   "pins" : [
     {
       "identity" : "gameoflife.swiftpm",
@@ -11,12 +11,12 @@
       }
     },
     {
-      "identity" : "playdatekit",
+      "identity" : "swift-playdate-examples",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/finnvoor/PlaydateKit",
+      "location" : "https://github.com/apple/swift-playdate-examples",
       "state" : {
         "branch" : "main",
-        "revision" : "b9a69fbeca09be0da3d63f8d1343aa671556ff58"
+        "revision" : "101a873c8fc7baf032c1d7a075a3bc3bf28323c0"
       }
     }
   ],

@@ -1,35 +1,28 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let gccIncludePrefix = "/usr/local/playdate/gcc-arm-none-eabi-9-2019-q4-major/lib/gcc/arm-none-eabi/9.2.1"
-
-let playdateSDKPath =
-    if let path = Context.environment["PLAYDATE_SDK_PATH"] {
-        path
-    } else {
-        "\(Context.environment["HOME"]!)/Developer/PlaydateSDK"
-    }
+guard let home = Context.environment["HOME"] else {
+    fatalError("could not determine home directory")
+}
 
 let package = Package(
     name: "game-of-life-playdate",
     products: [
-        .library(name: "GameOfLifePlaydate", targets: ["GameOfLifePlaydate"])
+        .library(name: "GameOfLifePlaydate", type: .static, targets: ["GameOfLifePlaydate"])
     ],
     dependencies: [
-        .package(url: "https://github.com/finnvoor/PlaydateKit", branch: "main"),
+        .package(url: "https://github.com/apple/swift-playdate-examples", branch: "main"),
         .package(url: "https://github.com/kkebo/GameOfLife.swiftpm", branch: "embedded"),
     ],
     targets: [
         .target(
             name: "GameOfLifePlaydate",
             dependencies: [
-                "PlaydateKit",
+                // "PlaydateKit",
+                .product(name: "Playdate", package: "swift-playdate-examples"),
                 .product(name: "GameOfLife", package: "GameOfLife.swiftpm"),
-            ],
-            exclude: [
-                "Resources/logo.png",
-                "Resources/pdxinfo",
             ],
             swiftSettings: [
                 .enableExperimentalFeature("Embedded"),
@@ -41,8 +34,9 @@ let package = Package(
                 .unsafeFlags(["-Xcc", "-I", "-Xcc", "\(gccIncludePrefix)/include"]),
                 .unsafeFlags(["-Xcc", "-I", "-Xcc", "\(gccIncludePrefix)/include-fixed"]),
                 .unsafeFlags(["-Xcc", "-I", "-Xcc", "\(gccIncludePrefix)/../../../../arm-none-eabi/include"]),
-                .unsafeFlags(["-I", "\(playdateSDKPath)/C_API"]),
+                .unsafeFlags(["-I", "\(home)/Developer/PlaydateSDK/C_API"]),
             ]
         )
-    ]
+    ],
+    swiftLanguageVersions: [.version("6")]
 )
