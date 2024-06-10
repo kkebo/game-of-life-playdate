@@ -1,5 +1,5 @@
 {
-  "originHash" : "2248e39948b95eb5237de32b9b0806f2254476aafd13439c3b581a10c9d6552f",
+  "originHash" : "f7273c5203f873d1a32480ac0ebaf61883e680ea525e012c70b8f0b4a803e82b",
   "pins" : [
     {
       "identity" : "gameoflife.swiftpm",
@@ -7,7 +7,7 @@
       "location" : "https://github.com/kkebo/GameOfLife.swiftpm",
       "state" : {
         "branch" : "embedded",
-        "revision" : "9487b5aaff52363c99d53c79d0466d75ae9bfcc7"
+        "revision" : "87c71c5d6dddd7c551ff29f1e2e3501d93d2560b"
       }
     },
     {
@@ -16,7 +16,7 @@
       "location" : "https://github.com/apple/swift-playdate-examples",
       "state" : {
         "branch" : "main",
-        "revision" : "101a873c8fc7baf032c1d7a075a3bc3bf28323c0"
+        "revision" : "749dd8f518429168d03e754764afb334a80b527d"
       }
     }
   ],
