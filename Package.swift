@@ -9,6 +9,7 @@ guard let home = Context.environment["HOME"] else {
 
 let package = Package(
     name: "game-of-life-playdate",
+    platforms: [.macOS(.v14)],
     products: [
         .library(name: "GameOfLifePlaydate", type: .static, targets: ["GameOfLifePlaydate"])
     ],
