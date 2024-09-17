@@ -37,6 +37,5 @@ let package = Package(
                 .unsafeFlags(["-I", "\(home)/Developer/PlaydateSDK/C_API"]),
             ]
         )
-    ],
-    swiftLanguageVersions: [.version("6")]
+    ]
 )
