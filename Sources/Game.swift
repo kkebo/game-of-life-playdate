@@ -30,9 +30,14 @@ final class Game {
     }
 
     func update() -> Bool {
-        if System.buttonState.pushed == .a {
-            self.reset()
-        } else {
+        switch System.buttonState.pushed {
+        case .a:
+            self.automaton.clear()
+            self.automaton.putRPentomino()
+        case .b:
+            self.automaton.clear()
+            self.automaton.putRandomly()
+        case _:
             self.automaton.next()
         }
 
@@ -49,10 +54,5 @@ final class Game {
         }
 
         return true
-    }
-
-    func reset() {
-        self.automaton.clear()
-        self.automaton.putRPentomino()
     }
 }
